@@ -1,0 +1,79 @@
+<ion-content>
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <h2 ion-text class="text-primary">
+      <strong>กรอกข้อมูลการรีวิว</strong>
+    </h2>
+  </div>
+
+  <div class="card-content">
+    <ion-col>
+      <ion-row>
+        <ion-label class="text-review"><strong>ชื่อสถานที่ท่องเที่ยว :</strong></ion-label>
+        <ion-input [(ngModel)]="placename" type="text" maxlength="100" name="placename"
+          placeholder="กรอกชื่อสถานที่ท่องเที่ยว">
+        </ion-input>
+      </ion-row>
+
+      <div text-left style="margin-top: 3%; padding: 0 10px;"></div>
+
+      <ion-row>
+        <ion-col>
+          <ion-label class="text-review"><strong>วันที่ท่องเที่ยว</strong></ion-label>
+          <ion-input [(ngModel)]="date" type="text" maxlength="20" name="date" placeholder="วัน / เดือน / ปี">
+          </ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label class="text-review"><strong>ตำแหน่ง</strong></ion-label>
+          <ion-input [(ngModel)]="location" type="text" maxlength="20" name="location"
+            placeholder="กรอกตำแหน่งของสถานที่ท่องเที่ยว">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <div text-left style="margin-top: 3%; padding: 0 10px;"></div>
+
+      <ion-col>
+        <ion-label class="text-review"><strong>รีวิวสถานที่ท่องเที่ยว</strong></ion-label>
+        <ion-textarea [(ngModel)]="txtreview" type="text" maxlength="1000" name="txtreview"
+          placeholder="กรอกข้อความรีวิวสถานที่ท่องเที่ยว">
+        </ion-textarea>
+      </ion-col>
+
+      <div text-left style="margin-top: 3%; padding: 0 10px;"></div>
+
+      <ion-col>
+        <ion-label class="text-review"><strong>ความประทับใจ</strong></ion-label>
+        <ion-textarea class="impressive" [(ngModel)]="impressive" type="text" maxlength="500" name="impressive"
+          placeholder="กรอกความประทับใจ">
+        </ion-textarea>
+      </ion-col>
+
+    </ion-col>
+  </div>
+
+
+
+
+  <div>
+    <ion-button class="getstart" (click)="save()">
+      <ion-icon name='save' style="margin-right: 10px;"></ion-icon>
+      บันทึก
+    </ion-button>
+  </div>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+  <div class="animated fadeInUp get-start">
+    <ion-button class="getstart" (click)="back()">
+      <ion-icon name='arrow-back-circle' style="margin-right: 10px;"></ion-icon>
+      กลับ
+    </ion-button>
+    <ion-button class="getstart" (click)="backhome()">
+      <ion-icon name='home' style="margin-right: 10px;"></ion-icon>
+      กลับหน้าหลัก
+    </ion-button>
+  </div>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+</ion-content>

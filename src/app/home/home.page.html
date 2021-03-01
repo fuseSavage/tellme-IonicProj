@@ -1,20 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- -->
+<ion-content>
+  <div class="login-content">
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo">
+        <h2 ion-text class="text-primary">
+          <strong>รีวิวมา </strong>
+          <ion-icon name="airplane"></ion-icon>มารีวิว
+        </h2>
+      </div>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div text-left style="margin-top: 2%; padding: 0 10px;"></div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div text-center class="animated fadeIn img-content">
+      <ion-img src="https://www.chillpainai.com/src/wewakeup/chillwriter/uploads/2016-07-23%2009:53:45_03.png"></ion-img>
+    </div>
+
+    <div text-left style="margin-top: 5%; padding: 0 10px;"></div>
+
+    <div class="animated fadeInUp get-start">
+      <ion-button class="getstart" (click)="getstart()">
+        <ion-icon name='logo-ionic' style="margin-right: 10px;"></ion-icon>
+        เริ่มต้นใช้งาน
+      </ion-button>
+    </div>
+
+    <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
   </div>
+
+
+
+
 </ion-content>

@@ -1,6 +1,6 @@
 // Animate CSS
 .animated {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
@@ -16,7 +16,7 @@
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @keyframes fadeIn {
@@ -36,7 +36,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 1;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -69,24 +69,19 @@ ion-content {
   background-color: #fff;
   text-align: center;
 }
-@font-face{
+@font-face {
   font-family: Itim;
-  src: url('../../assets/fonts/itim.woff2') format('woff2');
+  src: url("../../assets/fonts/itim.woff2") format("woff2");
 }
 
-*{
+* {
   font-family: Itim;
 }
 
 h2 {
   font-size: 60px;
 }
-
-ion-icon {
-  size: 120px;
-}
-
-.getstart{
+.getstart {
   font-size: 30px;
 }
 ion-button {
@@ -95,10 +90,35 @@ ion-button {
   height: 60px;
 }
 
-ion-img {
-height: 50vh !important;
-width: auto !important;
-align-items: center;
+
+
+
+
+//** page-review**//
+.card-content {
+
+  margin-left: 10%;
+  margin-right: 10%;
+}
+ion-icon.icon-review {
+  font-size: 50px;
+}
+.text-review {
+  margin-left: 3%;
+  font-size: 25px;
+}
+ion-input {
+  margin-left: 3%;
+  margin-right: 3%;
+  border: solid 1px rgb(51, 48, 48);
+}
+ion-textarea {
+  height: 25vh;
+  border: solid 1px rgb(51, 48, 48);
+}
+ion-textarea.impressive {
+  height: 20vh;
+  border: solid 1px rgb(51, 48, 48);
 }
 
 @media only screen and (max-width: 700px) {
@@ -107,16 +127,36 @@ align-items: center;
     font-size: 40px;
   }
 
-  ion-icon {
-    size: 100px;
-  }
   ion-img {
     margin-left: auto;
     margin-right: auto;
     width: auto;
     height: auto;
   }
-  .getstart{
+  .getstart {
     font-size: 20px;
   }
+
+  //** page-review**//
+  .card-content {
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  ion-icon.icon-review {
+    font-size: 50px;
+  }
+  .text-review {
+    font-size: 18px;
+  }
+  ion-textarea {
+    height: 15vh;
+    border: solid 1px rgb(51, 48, 48);
+    margin-left: 2%;
+  }
+  ion-textarea.impressive {
+    height: 10vh;
+    border: solid 1px rgb(51, 48, 48);
+    margin-left: 2%;
+  }
+
 }

@@ -11,6 +11,24 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'page-select',
+    loadChildren: () => import('./page-select/page-select.module').then( m => m.PageSelectPageModule)
+  },
+  {
+    path: 'page-review',
+    loadChildren: () => import('./page-review/page-review.module').then( m => m.PageReviewPageModule)
+  },
+  {
+    path: 'page-read-review',
+    loadChildren: () => import('./page-read-review/page-read-review.module').then( m => m.PageReadReviewPageModule)
+  },
+  {
+    path: 'page-detail-review/:sendobj',
+    loadChildren: () => import('./page-detail-review/page-detail-review.module').then( m => m.PageDetailReviewPageModule)
+  },
+
+
 ];
 
 @NgModule({

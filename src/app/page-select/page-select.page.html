@@ -1,0 +1,54 @@
+<ion-content>
+  <div padding-horizontal text-center class="animated fadeInDown">
+      <h2 ion-text class="text-primary">
+        <strong>พร้อมแล้วเลือกเลย </strong>
+      </h2>
+    </div>
+  <ion-card class="card-content">
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='toReview()'>
+          <ion-icon class="icon-select" name='car'></ion-icon><br>
+          <ion-label class="text-select">รีวิวสถานที่ท่องเที่ยว</ion-label>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='toreadReview()'>
+          <ion-icon class="icon-select" name='airplane'></ion-icon><br>
+          <ion-label class="text-select">ดูสถานที่ท่องเที่ยวที่รีวิว</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='back()'>
+          <ion-icon class="icon-select" name='star'></ion-icon><br>
+          <ion-label class="text-select">รายการที่บันทึก</ion-label>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)='back()'>
+          <ion-icon class="icon-select" name='documents'></ion-icon><br>
+          <ion-label class="text-select">การอ้างอิงข้อมูล</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+  <div class="animated fadeInUp get-start">
+    <ion-button class="getstart" (click)="back()">
+      <ion-icon name='arrow-back-circle' style="margin-right: 10px;"></ion-icon>
+      กลับ
+    </ion-button>
+    <ion-button class="getstart" (click)="backhome()">
+      <ion-icon name='home' style="margin-right: 10px;"></ion-icon>
+      กลับหน้าหลัก
+    </ion-button>
+  </div>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+</ion-content>

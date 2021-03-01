@@ -1,6 +1,6 @@
 // Animate CSS
 .animated {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
@@ -16,7 +16,7 @@
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @keyframes fadeIn {
@@ -36,7 +36,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 1;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -69,24 +69,19 @@ ion-content {
   background-color: #fff;
   text-align: center;
 }
-@font-face{
+@font-face {
   font-family: Itim;
-  src: url('../../assets/fonts/itim.woff2') format('woff2');
+  src: url("../../assets/fonts/itim.woff2") format("woff2");
 }
 
-*{
+* {
   font-family: Itim;
 }
 
 h2 {
   font-size: 60px;
 }
-
-ion-icon {
-  size: 120px;
-}
-
-.getstart{
+.getstart {
   font-size: 30px;
 }
 ion-button {
@@ -96,9 +91,24 @@ ion-button {
 }
 
 ion-img {
-height: 50vh !important;
-width: auto !important;
-align-items: center;
+  height: 50vh !important;
+  width: auto !important;
+  align-items: center;
+}
+
+
+
+//** page-select**//
+.card-content {
+  background-color: rgb(106, 245, 245);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+ion-icon.icon-select {
+  font-size: 50px;
+}
+.text-select {
+  font-size: 25px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -107,16 +117,26 @@ align-items: center;
     font-size: 40px;
   }
 
-  ion-icon {
-    size: 100px;
-  }
   ion-img {
     margin-left: auto;
     margin-right: auto;
     width: auto;
     height: auto;
   }
-  .getstart{
+  .getstart {
     font-size: 20px;
+  }
+
+  //** page-select**//
+  .card-content {
+    background-color: rgb(106, 245, 245);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ion-icon.icon-select {
+    font-size: 50px;
+  }
+  .text-select {
+    font-size: 25px;
   }
 }

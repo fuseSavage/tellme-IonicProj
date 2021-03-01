@@ -1,0 +1,36 @@
+<ion-content>
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <h2 ion-text class="text-primary">
+      <strong>Wellcom</strong>
+    </h2>
+  </div>
+
+  <div class="animated fadeIn card-content">
+    <ion-col>
+      <ion-row>
+        <ion-label class="text-review"><strong>ชื่อสถานที่ท่องเที่ยว : {{tmpobj.placename}} </strong></ion-label>
+
+
+      </ion-row>
+    </ion-col>
+  </div>
+
+
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+  <div class="animated fadeInUp get-start">
+    <ion-button class="getstart" (click)="back()">
+      <ion-icon name='arrow-back-circle' style="margin-right: 10px;"></ion-icon>
+      กลับ
+    </ion-button>
+    <ion-button class="getstart" (click)="backhome()">
+      <ion-icon name='home' style="margin-right: 10px;"></ion-icon>
+      กลับหน้าหลัก
+    </ion-button>
+  </div>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
+
+
+</ion-content>
