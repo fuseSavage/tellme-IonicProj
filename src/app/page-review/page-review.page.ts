@@ -1,5 +1,5 @@
-import { crudapi } from './crudapi';
-import { NavController } from '@ionic/angular';
+import { crudapi } from '../crudapi';
+import { NavController, ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,8 +14,9 @@ export class PageReviewPage implements OnInit {
   location: String;
   txtreview: String;
   impressive: String;
+  img: String;
 
-  constructor( public navCtrl: NavController, private crud: crudapi ) { }
+  constructor( public navCtrl: NavController, private crud: crudapi, public toastCtrl: ToastController ) { }
 
   ngOnInit() {
 
@@ -29,8 +30,25 @@ export class PageReviewPage implements OnInit {
     this.navCtrl.navigateBack('/home')
   }
 
-  save() {
-    console.log(this.placename);
+  async saveData() {
+    // console.log(this.placename);
+
+    const toast = await this.toastCtrl.create({
+      message: 'บันทึกเรียบร้อย ',
+      duration: 2000,
+    });
+
+    let tmpobj = {
+      placename: this.placename,
+      date: this.date,
+      location: this.location,
+      txtreview: this.txtreview,
+      impressive: this.impressive,
+      img: this.img,
+    };
+    this.crud.cerateData(tmpobj);
+    this.navCtrl.pop();
+    toast.present();
   }
 
 }

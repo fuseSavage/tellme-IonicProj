@@ -9,7 +9,7 @@
     <ion-col>
       <ion-row>
         <ion-label class="text-review"><strong>หัวข้อการท่องเที่ยว :</strong></ion-label>
-        <ion-input [(ngModel)]="placename" type="text"  name="placename"
+        <ion-input  type="text" [(ngModel)]="placename" name="placename" value='{{tmpobj.placename}}'
           placeholder="กรอกชื่อสถานที่ท่องเที่ยว">
         </ion-input>
       </ion-row>
@@ -19,12 +19,12 @@
       <ion-row>
         <ion-col>
           <ion-label class="text-review"><strong>วันที่ท่องเที่ยว</strong></ion-label>
-          <ion-input [(ngModel)]="date" type="text" name="date" placeholder="วัน / เดือน / ปี">
+          <ion-input [(ngModel)]="date"  type="text" name="date" placeholder="วัน / เดือน / ปี">
           </ion-input>
         </ion-col>
         <ion-col>
           <ion-label class="text-review"><strong>ตำแหน่ง</strong></ion-label>
-          <ion-input [(ngModel)]="location" type="text"  name="location"
+          <ion-input [(ngModel)]="location"  type="text"  name="location"
             placeholder="กรอกตำแหน่งของสถานที่ท่องเที่ยว">
           </ion-input>
         </ion-col>
@@ -43,7 +43,7 @@
 
       <ion-col>
         <ion-label class="text-review"><strong>ความประทับใจ</strong></ion-label>
-        <ion-textarea rows="6" class="impressive" [(ngModel)]="impressive" type="text"  name="impressive"
+        <ion-textarea rows="6" [(ngModel)]="impressive" class="impressive"  type="text"  name="impressive"
           placeholder="กรอกความประทับใจ">
         </ion-textarea>
       </ion-col>

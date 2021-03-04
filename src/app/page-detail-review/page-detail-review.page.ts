@@ -1,4 +1,4 @@
-import { crudapi } from './../page-review/crudapi';
+import { crudapi } from '../crudapi';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
@@ -11,8 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class PageDetailReviewPage implements OnInit {
 
   tmpobj: any;
-
-
 
   constructor( public navCtrl: NavController, public actRoute: ActivatedRoute, private crud: crudapi) { }
 
@@ -32,6 +30,5 @@ export class PageDetailReviewPage implements OnInit {
   backhome() {
     this.navCtrl.navigateBack('/home')
   }
-
 
 }

@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageSelectPage implements OnInit {
 
+
+
   constructor( public navCtrl: NavController, actRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -29,5 +31,7 @@ export class PageSelectPage implements OnInit {
   toreadReview() {
     this.navCtrl.navigateForward('/page-read-review')
   }
+
+
 
 }

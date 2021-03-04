@@ -121,6 +121,11 @@ ion-textarea.impressive {
   border: solid 1px rgb(51, 48, 48);
 }
 
+.text-base .font-style{
+  font-family: Itim;
+  font-size: 25px;
+}
+
 @media only screen and (max-width: 700px) {
   h2 {
     margin-top: 15%;
@@ -161,6 +166,11 @@ ion-textarea.impressive {
   ion-item-sliding {
     margin-left: 2%;
     margin-right: 2%;
+  }
+
+  .text-base .font-style{
+    font-family: Itim;
+    font-size: 18px;
   }
 
 }

@@ -67,6 +67,7 @@
 ion-content {
   --background: url(../../assets/bg.jpg) 0 0/100% 100% no-repeat !important;
   background-color: #fff;
+  text-align: center;
 }
 @font-face {
   font-family: Itim;
@@ -89,9 +90,13 @@ ion-button {
   height: 60px;
 }
 
+
+
+
+
 //** page-review**//
 .card-content {
-  text-align: center;
+
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -116,19 +121,6 @@ ion-textarea.impressive {
   border: solid 1px rgb(51, 48, 48);
 }
 
-.text-review-box {
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 20px;
-}
-.button-content {
-  text-align: center;
-}
-
-.center-content {
-  text-align: center;
-}
-
 @media only screen and (max-width: 700px) {
   h2 {
     margin-top: 15%;
@@ -147,8 +139,7 @@ ion-textarea.impressive {
 
   //** page-review**//
   .card-content {
-    text-align: center;
-    margin-left: 2%;
+    margin-left: auto;
     margin-right: 2%;
   }
   ion-icon.icon-review {
@@ -163,27 +154,9 @@ ion-textarea.impressive {
     margin-left: 2%;
   }
   ion-textarea.impressive {
-    height: 30vh;
+    height: 10vh;
     border: solid 1px rgb(51, 48, 48);
     margin-left: 2%;
   }
-  ion-item-sliding {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
 
-  .txtreview {
-    margin-left: 2%;
-  }
-
-
-.text-review-box {
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 16px;
-}
-
-.button-content {
-  text-align: center;
-}
 }

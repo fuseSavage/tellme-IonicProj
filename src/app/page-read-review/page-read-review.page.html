@@ -1,24 +1,36 @@
-
 <ion-content>
   <div padding-horizontal text-center class="animated fadeInDown">
     <h2 ion-text class="text-primary">
-      <strong>สถานที่ท่องเที่ยวที่รีวิว</strong>
+      <strong>แก้ไขสถานที่ท่องเที่ยว</strong>
     </h2>
   </div>
+
+  <div text-left style="margin-top: 10%; padding: 0 10px;"></div>
 
   <div class="animated fadeIn card-content">
     <ion-item-sliding *ngFor="let list of this.tmpobj ">
       <ion-item-options side="start"></ion-item-options>
 
-      <ion-item>
-        <ion-label style="font-family: Itim;" ><strong>{{list.placename}}</strong> </ion-label>
-        <ion-label style="font-family: Itim;" >{{list.location}}</ion-label>
+      <ion-item class="text-base">
+        <ion-label class="font-style"><strong>{{list.placename}}</strong> </ion-label>
+        <ion-label class="font-style">{{list.location}}</ion-label>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option style="font-family: Itim;" (click)="presentActionSheet(list)" color="medium" expandable>
+
+        <ion-item-option style="font-family: Itim;" (click)="readDetail(list)" color="medium" expandable>
           คลิกดูรายละเอียด
         </ion-item-option>
+
+        <ion-item-option style="font-family: Itim;" (click)="editData(list)" color="warning" expandable>
+          แก้ไข
+        </ion-item-option>
+
+        <ion-item-option style="font-family: Itim;" (click)="delData(list)" color="danger" expandable>
+          ลบ
+        </ion-item-option>
+
+
       </ion-item-options>
     </ion-item-sliding>
   </div>

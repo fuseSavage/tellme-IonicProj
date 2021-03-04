@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
-import { crudapi } from './../page-review/crudapi';
-import { NavController } from '@ionic/angular';
+import { crudapi } from '../crudapi';
+import { AlertController, NavController, ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,19 +14,20 @@ export class PageReadReviewPage implements OnInit {
 
   tmpobj: any;
 
-  constructor( public navCtrl: NavController, private crud: crudapi, public actRoute: ActivatedRoute ) { }
+  constructor(public navCtrl: NavController, private crud: crudapi, public actRoute: ActivatedRoute, public toastCtrl: ToastController, public alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.crud.readData().subscribe(data => {
-      this.tmpobj = data.map( e => {
+      this.tmpobj = data.map(e => {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          placename : e.payload.doc.data()['placename'.toString()],
-          date : e.payload.doc.data()['date'.toString()],
-          location : e.payload.doc.data()['location'.toString()],
-          txtreview : e.payload.doc.data()['txtreview'.toString()],
-          impressive : e.payload.doc.data()['impressive'.toString()],
+          placename: e.payload.doc.data()['placename'.toString()],
+          date: e.payload.doc.data()['date'.toString()],
+          location: e.payload.doc.data()['location'.toString()],
+          txtreview: e.payload.doc.data()['txtreview'.toString()],
+          impressive: e.payload.doc.data()['impressive'.toString()],
+          img: e.payload.doc.data()['img'.toString()],
         };
       });
     });
@@ -34,29 +35,10 @@ export class PageReadReviewPage implements OnInit {
 
   }
 
-  async presentActionSheet(item: any) {
-    const actionSheet = document.createElement('ion-action-sheet');
-    console.log(item);
+  async readDetail(item: any) {
 
-    actionSheet.header = 'SELECT';
-    actionSheet.cssClass = 'my-custom-class';
-    actionSheet.buttons = [ {
-      text: 'อ่านรีวิว',
-      icon: 'book',
-      handler: () => {
-        //this.placename = placename;
-        this.navCtrl.navigateForward(['page-detail-review', JSON.stringify(item)])
-      }
-    },{
-      text: 'บันทึก',
-      icon: 'save',
-      handler: () => {
-        //this.placename = placename;
-        this.navCtrl.navigateForward('/h3-travel-aec/'+ this.placename)
-      }
-    }];
-    document.body.appendChild(actionSheet);
-    return actionSheet.present();
+    this.navCtrl.navigateForward(['page-detail-review', JSON.stringify(item)])
+
   }
 
   back() {
@@ -67,4 +49,30 @@ export class PageReadReviewPage implements OnInit {
     this.navCtrl.navigateBack('/home')
   }
 
+  async delData(item: any) {
+    const alert = await this.alertCtrl.create({
+      message: 'ยืนยันการลบ',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'ลบ',
+          handler: () => {
+            console.log('Delete Data');
+            this.crud.delData(item.id);
+          }
+        }
+      ]
+    });
+    (await alert).present();
+  };
+
+  editData(item : any) {
+    this.navCtrl.navigateForward(['/page-edit',JSON.stringify(item)]);
+  }
 }

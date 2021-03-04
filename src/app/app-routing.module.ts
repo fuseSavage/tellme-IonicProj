@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'page-detail-review/:sendobj',
     loadChildren: () => import('./page-detail-review/page-detail-review.module').then( m => m.PageDetailReviewPageModule)
   },
+  {
+    path: 'page-edit/:sendedit',
+    loadChildren: () => import('./page-edit/page-edit.module').then( m => m.PageEditPageModule)
+  },
 
 
 ];
